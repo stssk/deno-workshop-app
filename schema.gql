@@ -1,0 +1,6 @@
+type Feedback {
+   id: ID!
+   subject: String!
+   feedback: String
+   stars: Int
+}
