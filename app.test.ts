@@ -2,7 +2,8 @@ import { assertEquals, assertExists, assert } from "https://deno.land/std@0.126.
 import { IFeedback } from "./model.ts";
 
 const { test } = Deno;
-const baseUrl = "http://localhost:8000";
+// const baseUrl = "http://localhost:8000";
+const baseUrl = "https://miles-workshop.deno.dev";
 
 test("I should get all posts", async () => {
     const res = await fetch(`${baseUrl}/feedback`);
