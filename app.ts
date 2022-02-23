@@ -10,7 +10,15 @@ router
     .get("/feedback", controller.getAllFeedback)
     .post("/feedback", controller.addFeedback)
     .put("/feedback/:id", controller.updateFeedback)
-    .delete("/feedback/:id", controller.deleteFeedback);
+    .delete("/feedback/:id", controller.deleteFeedback)
+    .get("/oppgaver", async ctx => {
+        ctx.response.type = "text/markdown";
+        ctx.response.body = await Deno.readFile("./public/oppgaver.md");
+    })
+    .get("/oppgaver/oak", async ctx => {
+        ctx.response.type = "text/markdown";
+        ctx.response.body = await Deno.readFile("./public/oak.md");
+    });
 
 const app = new Application()
     .use(router.routes())

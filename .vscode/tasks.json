@@ -9,7 +9,7 @@
                 "run",
                 "--allow-net=0.0.0.0:8000",
                 "--allow-env=DB_SECRET",
-                "--allow-read=.env,.env.defaults,.env.examples",
+                "--allow-read=.env,.env.defaults,.env.examples,./public/",
                 "--watch",
                 "app.ts"
             ],
