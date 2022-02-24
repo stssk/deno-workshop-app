@@ -32,5 +32,5 @@ const app = new Application()
     .use(router.routes())
     .use(router.allowedMethods());
 
-console.log("Server started on http://localhost:7000");
-await app.listen({ port: 7000 });
+console.log("Server started on http://localhost:8000");
+await app.listen({ port: 8000 });
