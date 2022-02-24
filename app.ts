@@ -15,7 +15,15 @@ router
         ctx.response.type = "text/markdown";
         ctx.response.body = await Deno.readFile("./public/oppgaver.md");
     })
+    .get("/oppgaver.md", async ctx => {
+        ctx.response.type = "text/markdown";
+        ctx.response.body = await Deno.readFile("./public/oppgaver.md");
+    })
     .get("/oppgaver/oak", async ctx => {
+        ctx.response.type = "text/markdown";
+        ctx.response.body = await Deno.readFile("./public/oak.md");
+    })
+    .get("/oppgaver/oak.md", async ctx => {
         ctx.response.type = "text/markdown";
         ctx.response.body = await Deno.readFile("./public/oak.md");
     });
